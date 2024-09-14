@@ -1,1 +1,3 @@
-**/datasets
+**/dataset
+**/vit_model
+**/__pycache__/*
