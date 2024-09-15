@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "amazon-ml-2024"
+version = "0.1.0"
+description = ""
+authors = ["Saatwik Vasishtha <saatwik.vasishtha@gmail.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+tensorflow-io-gcs-filesystem = { version = "*", python = ">=3.10,<3.12" }
+tensorflow = "2.15"
+nvidia-cudnn-cu12 = "8.9.7.29"
+pandas = "^2.2.2"
+numpy = "1.26.4"
+pillow = "^10.4.0"
+easyocr = "^1.7.1"
+transformers = "4.37.2"
+nvidia-nccl-cu12 = "^2.23.4"
+pydot = "^3.0.1"
+graphviz = "^0.20.3"
+open-clip-torch = "^2.26.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -53,19 +53,26 @@ def download_image(image_link, save_folder, index, retries=3, delay=3):
     new_image_save_path = os.path.join(save_folder, new_filename)
 
     # Check if the file exists with the original name
-    if os.path.exists(original_image_save_path):
-        os.rename(original_image_save_path, new_image_save_path)
-        return
+    try:
+        if os.path.exists(original_image_save_path):
+            os.rename(original_image_save_path, new_image_save_path)
+            return
+    except:
+        pass
 
     # Check if the file already exists with the new name
-    if os.path.exists(new_image_save_path):
-        return
+    try:
+        if os.path.exists(new_image_save_path):
+            return
+    except:
+        pass
 
     for _ in range(retries):
         try:
             urllib.request.urlretrieve(image_link, original_image_save_path)
-            os.rename(original_image_save_path, new_image_save_path)
-            return
+            if os.path.exists(original_image_save_path):  # Ensure the file was downloaded
+                os.rename(original_image_save_path, new_image_save_path)
+                return
         except:
             time.sleep(delay)
     

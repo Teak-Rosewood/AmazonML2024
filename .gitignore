@@ -1,3 +1,8 @@
 **/dataset
+**/dataset_test
+**/datasets/vector_images
 **/vit_model
-**/__pycache__/*
+**/__pycache__
+**/models
+
+**/chroma
