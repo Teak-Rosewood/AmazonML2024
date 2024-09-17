@@ -1,6 +1,7 @@
 **/dataset
 **/dataset_test
 **/datasets/vector_images
+**/datasets/test_images
 **/vit_model
 **/__pycache__
 **/models
